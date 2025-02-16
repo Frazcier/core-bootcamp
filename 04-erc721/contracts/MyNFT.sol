@@ -15,7 +15,7 @@ contract MyNFT is ERC721URIStorage {
         _safeMint(msg.sender, tokenId);
         _setTokenURI(
             tokenId,
-            "https://raw.githubusercontent.com/Frazcier/core-bootcamp/refs/heads/main/04-erc721/metadata.json"
+            "https://github.com/Frazcier/core-bootcamp/blob/main/04-erc721/metadata.json"
         );
         tokenId++;
     }
