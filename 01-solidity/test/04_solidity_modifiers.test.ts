@@ -9,17 +9,12 @@ import hre from "hardhat";
 describe("SolidityModifiers", function () {
   async function deploy() {
     const [account1, account2] = await hre.ethers.getSigners();
-
-    const SolidityModifiers = await hre.ethers.getContractFactory(
-      "SolidityModifiers"
-    );
+    const SolidityModifiers = await hre.ethers.getContractFactory("SolidityModifiers");
     const INITIAL_BALANCE = 1_000_000;
-
     const ctcSolidityModifiers = await SolidityModifiers.deploy(
       INITIAL_BALANCE,
       account1
     );
-
     return { ctcSolidityModifiers, account1, account2 };
   }
 

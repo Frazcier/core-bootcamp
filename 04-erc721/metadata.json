@@ -1,0 +1,20 @@
+{
+    "name": "Ikinamada",
+    "description": "Ik1n4M4Da",
+    "symbol": "IKI",
+    "image": "https://i.imgur.com/rjzSCpm.jpeg",
+    "attributes": [
+        {
+            "trait_type": "Face",
+            "value": "Very Handsome"
+        },
+        {
+            "trait_type": "Body",
+            "value": "Very Toned"
+        },
+        {
+            "trait_type": "Aura",
+            "value": "+infinite"
+        }
+    ]
+}

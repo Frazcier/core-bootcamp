@@ -9,21 +9,14 @@ import hre from "hardhat";
 describe("SolidityConstructor", function () {
   async function deploy() {
     const [account1] = await hre.ethers.getSigners();
-
-    const SolidityConstructor = await hre.ethers.getContractFactory(
-      "SolidityConstructor"
-    );
-    const INITIAL_BALANCE = 1_000_000;
-
-    const ctcSolidityConstructor = await SolidityConstructor.deploy(
-      INITIAL_BALANCE
-    );
-
+    const SolidityConstructor = await hre.ethers.getContractFactory("SolidityConstructor");
+    const INITIAL_BALANCE = 500;
+    const ctcSolidityConstructor = await SolidityConstructor.deploy(INITIAL_BALANCE);
     return { ctcSolidityConstructor, account1 };
   }
 
-  describe("Deployment", function () {
-    it("should call constructor", async function () {
+  describe("DEPLOYMENT EXECUTED", function () {
+    it("CONSTRUCTOR EXECUTED", async function () {
       const { ctcSolidityConstructor } = await loadFixture(deploy);
 
       expect(ctcSolidityConstructor).not.to.be.undefined;

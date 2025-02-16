@@ -9,14 +9,13 @@ contract SolidityDataTypes {
 
     constructor() {
         balance = 10000;
-        owner = address(0);
-        accounts["theblokc"] = 999999;
+        owner = address(99);
+        accounts["theblokc"] = 10;
+        accounts["nintyniner"] = 20;
 
-        // TODO: print the values above using console.log
-        // console.log("balance is ", balance);
-
-        // console.log("owner is ", owner);
-
-        // console.log("account is ", accounts["theblokc"]);
+        console.log("balance is ", balance);
+        console.log("owner is ", owner);
+        console.log("account is ", accounts["theblokc"]);
+        console.log("account is ", accounts["nintyniner"]);
     }
 }

@@ -9,33 +9,33 @@ import hre from "hardhat";
 describe("SolidityFunctions", function () {
   async function deploy() {
     const [account1] = await hre.ethers.getSigners();
-
-    const SolidityFunctions = await hre.ethers.getContractFactory(
-      "SolidityFunctions"
-    );
-    const INITIAL_BALANCE = 1_000_000;
-
-    const ctcSolidityFunctions = await SolidityFunctions.deploy(
-      INITIAL_BALANCE
-    );
-
+    const SolidityFunctions = await hre.ethers.getContractFactory("SolidityFunctions");
+    const INITIAL_BALANCE = 0;
+    const ctcSolidityFunctions = await SolidityFunctions.deploy(INITIAL_BALANCE);
     return { ctcSolidityFunctions, account1 };
   }
 
   describe("Deployment", function () {
-    it("should call constructor", async function () {
+    it("CONSTRUCTOR EXECUTED", async function () {
       const { ctcSolidityFunctions } = await loadFixture(deploy);
-
       expect(ctcSolidityFunctions).not.to.be.undefined;
-    });
-
-    it("should add balance", async function () {
-      const { ctcSolidityFunctions } = await loadFixture(deploy);
-
-      await ctcSolidityFunctions.addBalance(1_000_000);
-
-      const balance = await ctcSolidityFunctions.getBalance();
-      console.log("balance is now ", balance);
+      let balance = await ctcSolidityFunctions.getBalance();
+      console.log("01 balance is now ", balance);
+      await ctcSolidityFunctions.addBalance(60);
+      balance = await ctcSolidityFunctions.getBalance();
+      console.log("02 balance is now ", balance);
+      await ctcSolidityFunctions.calculator(1, 20);
+      balance = await ctcSolidityFunctions.getBalance();
+      console.log("03 balance is now ", balance);
+      await ctcSolidityFunctions.calculator(2, 20);
+      balance = await ctcSolidityFunctions.getBalance();
+      console.log("04 balance is now ", balance);
+      await ctcSolidityFunctions.calculator(3, 20);
+      balance = await ctcSolidityFunctions.getBalance();
+      console.log("05 balance is now ", balance);
+      await ctcSolidityFunctions.calculator(4, 20);
+      balance = await ctcSolidityFunctions.getBalance();
+      console.log("06 balance is now ", balance);
     });
   });
 });
