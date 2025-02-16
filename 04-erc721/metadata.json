@@ -1,12 +1,16 @@
 {
-    "name": "Inshallah Ikinamada",
-    "description": "1n5H4lLaH 1k1n4m4d4",
-    "symbol": "ISHIKI",
-    "image": "https://i.imgur.com/7ab9kBy.jpeg",
+    "name": "Shouting Ikinamada",
+    "description": "5h0Ut1Ng 1k1n4M4d4",
+    "symbol": "SHIKI",
+    "image": "https://i.imgur.com/a2Tl2Sf.jpeg",
     "attributes": [
         {
             "trait_type": "Face",
             "value": "Very Handsome"
+        },        
+        {
+            "trait_type": "Voice",
+            "value": "Heavenly"
         },
         {
             "trait_type": "Body",

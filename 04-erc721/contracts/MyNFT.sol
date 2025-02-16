@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract MyNFT is ERC721URIStorage {
     uint256 tokenId;
 
-    constructor() ERC721("Ikinamada", "IKI") {}
+    constructor() ERC721("Shouting Ikinamada", "SHIKI") {}
 
     function mint() external {
         _safeMint(msg.sender, tokenId);
